@@ -168,11 +168,12 @@ export const mockDataTeam = [
 export const mockDataContacts = [
   {
     id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
+    name: "Brian Nyingambe",
+    image: "../../assets/brian.jpg",
+    email: "briannmbe@gmail.com",
     age: 35,
-    phone: "(665)121-5454",
-    address: "0912 Won Street, Alabama, SY 10001",
+    phone: "(256)121-5454",
+    address: "0912 Kla Kyebando, Uganda, SY 10001",
     city: "New York",
     zipCode: "10001",
     registrarId: 123512,
@@ -180,6 +181,7 @@ export const mockDataContacts = [
   {
     id: 2,
     name: "Cersei Lannister",
+    image: "../../assets/man.jpg",
     email: "cerseilannister@gmail.com",
     age: 42,
     phone: "(421)314-2288",
@@ -191,6 +193,7 @@ export const mockDataContacts = [
   {
     id: 3,
     name: "Jaime Lannister",
+    image: "../../assets/dog.jpg",
     email: "jaimelannister@gmail.com",
     age: 45,
     phone: "(422)982-6739",
@@ -202,6 +205,7 @@ export const mockDataContacts = [
   {
     id: 4,
     name: "Anya Stark",
+    image: "../../assets/lady2.jpg",
     email: "anyastark@gmail.com",
     age: 16,
     phone: "(921)425-6742",
@@ -213,6 +217,7 @@ export const mockDataContacts = [
   {
     id: 5,
     name: "Daenerys Targaryen",
+    image: "../../assets/man2.jpg",
     email: "daenerystargaryen@gmail.com",
     age: 31,
     phone: "(421)445-1189",
@@ -224,6 +229,7 @@ export const mockDataContacts = [
   {
     id: 6,
     name: "Ever Melisandre",
+    image: "../../assets/lady.jpg",
     email: "evermelisandre@gmail.com",
     age: 150,
     phone: "(232)545-6483",
@@ -235,6 +241,7 @@ export const mockDataContacts = [
   {
     id: 7,
     name: "Ferrara Clifford",
+    image: "../../assets/man2.jpg",
     email: "ferraraclifford@gmail.com",
     age: 44,
     phone: "(543)124-0123",
@@ -246,6 +253,7 @@ export const mockDataContacts = [
   {
     id: 8,
     name: "Rossini Frances",
+    image: "../../assets/dog.jpg",
     email: "rossinifrances@gmail.com",
     age: 36,
     phone: "(222)444-5555",
@@ -257,6 +265,7 @@ export const mockDataContacts = [
   {
     id: 9,
     name: "Harvey Roxie",
+    image: "../../assets/lady2.jpg",
     email: "harveyroxie@gmail.com",
     age: 65,
     phone: "(444)555-6239",
@@ -268,6 +277,7 @@ export const mockDataContacts = [
   {
     id: 10,
     name: "Enteri Redack",
+    image: "../../assets/man2.jpg",
     email: "enteriredack@gmail.com",
     age: 42,
     phone: "(222)444-5555",
@@ -279,6 +289,7 @@ export const mockDataContacts = [
   {
     id: 11,
     name: "Steve Goodman",
+    image: "../../assets/lady.jpg",
     email: "stevegoodmane@gmail.com",
     age: 11,
     phone: "(444)555-6239",
@@ -297,6 +308,7 @@ export const mockDataInvoices = [
     cost: "21.24",
     phone: "(665)121-5454",
     date: "03/12/2022",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 2,
@@ -305,6 +317,7 @@ export const mockDataInvoices = [
     cost: "1.24",
     phone: "(421)314-2288",
     date: "06/15/2021",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 3,
@@ -313,6 +326,7 @@ export const mockDataInvoices = [
     cost: "11.24",
     phone: "(422)982-6739",
     date: "05/02/2022",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 4,
@@ -321,6 +335,7 @@ export const mockDataInvoices = [
     cost: "80.55",
     phone: "(921)425-6742",
     date: "03/21/2022",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 5,
@@ -329,6 +344,7 @@ export const mockDataInvoices = [
     cost: "1.24",
     phone: "(421)445-1189",
     date: "01/12/2021",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 6,
@@ -337,6 +353,7 @@ export const mockDataInvoices = [
     cost: "63.12",
     phone: "(232)545-6483",
     date: "11/02/2022",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 7,
@@ -345,6 +362,7 @@ export const mockDataInvoices = [
     cost: "52.42",
     phone: "(543)124-0123",
     date: "02/11/2022",
+    address: "Kayiga Close KBN12, Kye",
   },
   {
     id: 8,
@@ -353,6 +371,7 @@ export const mockDataInvoices = [
     cost: "21.24",
     phone: "(222)444-5555",
     date: "05/02/2021",
+    address: "Kayiga Close KBN12, Kye",
   },
 ];
 
