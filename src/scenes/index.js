@@ -11,3 +11,4 @@ export { default as Faq } from "./Calendar";
 export { default as Calendar } from "./Faq";
 export { default as TopBar } from "./global/TopBar";
 export { default as SideBar } from "./global/SideBar";
+export { default as Header } from "./global/Header";

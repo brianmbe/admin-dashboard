@@ -2,15 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // prettier-ignore
 import { Sidebar, Menu, SubMenu, MenuItem, sidebarClasses, menuClasses } from "react-pro-sidebar";
-import {
-  Box,
-  Typography,
-  useTheme,
-  IconButton,
-  Card,
-  CardContent,
-  Container,
-} from "@mui/material";
+// prettier-ignore
+import { Box, Typography, useTheme, IconButton, Card, CardContent, Container } from "@mui/material";
 import { tokens } from "../../theme/theme";
 
 // Icons
@@ -26,6 +19,7 @@ import StackedLineChartOutlinedIcon from "@mui/icons-material/StackedLineChartOu
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
 // Icons
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -48,14 +42,15 @@ export default function SideBar() {
 
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [selected, setSelected] = useState("Dashboard");
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <Box>
       <Sidebar
+        collapsed={isCollapsed}
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
-            backgroundColor: colors.primary[600],
+            backgroundColor: colors.grey[600],
             fontWeight: "bold",
             border: "none",
           },
@@ -92,30 +87,63 @@ export default function SideBar() {
             },
           }}
         >
-          {/* User */}
-          <Box mb="25px">
-            <Box display="flex" justifyContent="center" alignItems="center">
-              <img
-                src="../../assets/brian.jpg"
-                alt="Profie-user"
-                height="70px"
-                width="70px"
-                style={{ borderRadius: "50%", cursor: "pointer" }}
-              />
-            </Box>
-            <Box textAlign="center" mt="10px">
-              <Typography
-                variant="h3"
-                color={colors.grey[100]}
-                fontWeight="bold"
+          {/* Logo and menu */}
+          <MenuItem
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+            style={{
+              margin: "10px 0 20px 0",
+              color: colors.grey[100],
+              backgroundColor: "transparent",
+            }}
+          >
+            {!isCollapsed && (
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
               >
-                Mr. Brian
-              </Typography>
-              <Typography color={colors.greenAccent[500]}>
-                Admin FirstBank
-              </Typography>
+                <Typography
+                  variant="h4"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  color={colors.grey[100]}
+                >
+                  FirstBank
+                </Typography>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                  <CloseOutlinedIcon />
+                </IconButton>
+              </Box>
+            )}
+          </MenuItem>
+
+          {/* User */}
+          {!isCollapsed && (
+            <Box mb="25px">
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <img
+                  src="../../assets/brian.jpg"
+                  alt="Profie-user"
+                  height="70px"
+                  width="70px"
+                  style={{ borderRadius: "50%", cursor: "pointer" }}
+                />
+              </Box>
+              <Box textAlign="center" mt="10px">
+                <Typography
+                  variant="h3"
+                  color={colors.grey[100]}
+                  fontWeight="bold"
+                >
+                  Mr. Brian
+                </Typography>
+                <Typography color={colors.greenAccent[500]}>
+                  Admin FirstBank
+                </Typography>
+              </Box>
             </Box>
-          </Box>
+          )}
 
           {/* Menuitems */}
           <SubMenu
