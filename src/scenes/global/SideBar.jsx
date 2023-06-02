@@ -34,8 +34,6 @@ import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import RestartAltOutlinedIcon from "@mui/icons-material/RestartAltOutlined";
 
 export default function SideBar() {
-  const [activeMenuItem, setActiveMenuItem] = useState("");
-
   const handleMenuItemClick = (id) => {
     setActiveMenuItem(id);
   };
@@ -43,6 +41,7 @@ export default function SideBar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [activeMenuItem, setActiveMenuItem] = useState("");
 
   return (
     <Box>
