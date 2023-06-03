@@ -118,7 +118,7 @@ export default function Contacts() {
                 src="../../public/assets/man.jpg"
                 height="250px"
                 width="250px"
-                alt="image-1"
+                alt="image_1"
               />
             </Grid>
             <Grid item xs={12} sm={8}>
